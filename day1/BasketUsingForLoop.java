@@ -12,10 +12,18 @@ public class BasketUsingForLoop {
         prices[2] = 200.42;
         // Printing Via Loop
         int sizeOfBasket = baskets.length;
+
         System.out.println(" ====== Content of Basket ========");
+
         for (int i = 0; i < sizeOfBasket; i++) {
+            // stop printing if the basket content is null
+            if(baskets[i] == null){
+                break;
+            }
             System.out.println("Item " + baskets[i] + "| Price : " + prices[i]);
         }
+    
+        System.out.println("=== End of Basket ==== ");
 
     }
 }
